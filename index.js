@@ -30,7 +30,7 @@ async function fetchItem(itemName) {
 
     const data = await res.json();
     const name = data.name;
-    const img = data.sprites?.default; //First use of optional chaining so that it doesn't break if it can't find anything
+    const img = data.sprites?.default; 
     const effect = data.effect_entries.find(e => e.language.name === 'en')?.short_effect || 'No effect info.';
     const cost = data.cost;
 
@@ -49,4 +49,3 @@ async function fetchItem(itemName) {
 }
 
 window.onload = fetchItemList;
-
