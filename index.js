@@ -8,7 +8,7 @@ async function fetchItemList() {
     listDiv.innerHTML = data.results.map(item => `      
       <div class="item-name" onclick="fetchItem('${item.name}')">
         ${item.name}</div>`).join('');                      //the .join is to combine all the strings .map created into one string
-  } catch (err) {                                           //error handling
+  } catch (err) {                                          
     listDiv.innerHTML = '<p style="color:red;">Failed to load item list</p>';
     console.error("Error fetching item list:", err);
   }
