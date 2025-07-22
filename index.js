@@ -24,7 +24,7 @@ async function fetchItem(itemName) {
 
 try {
     const res = await fetch(`https://pokeapi.co/api/v2/item/${input}`);
-    if (!res.ok) throw new Error("Item not found, try Saffron City"); //If no response, go to the catch block
+    if (!res.ok) throw new Error("Item not found, try Saffron City nerd"); //If no response, go to the catch block
 
     const data = await res.json();
     const name = data.name;
